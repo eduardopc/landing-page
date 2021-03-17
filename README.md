@@ -37,3 +37,12 @@ Runs next build and export which exports a files in a `out` folder to deploy
 ```bash
 $ yarn deploy
 ```
+
+### Tips
+
+Para pegar um código HTML do backend e apresentar corretamente no front, utilizar da seguinte sintaxe:
+
+> <S.Text dangerouslySetInnerHTML={{ __html: description }}/>
+
+Essa abordagem é válida quando temos confiança no dado passado pelo backend.
+Em caso onde não há certeza, é necessário fazer a sanitização do dado antes de apresentá-lo.
