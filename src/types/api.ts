@@ -1,10 +1,10 @@
 export type LogoProps = {
-  alternativeText: string,
+  alternativeText: string
   url: string
 }
 
 export type HeaderProps = {
-  title: string,
+  title: string
   description: string
   image: {
     alternativeText: string
@@ -25,8 +25,49 @@ export type AboutProps = {
   }
 }
 
+export type TechsProps = {
+  title: string
+  techIcons: [
+    {
+      title: string
+      icon: {
+        url: string
+      }
+    }
+  ]
+}
+
+export type ConceptsProps = {
+  title: string
+  concepts: [
+    {
+      title: string
+    }
+  ]
+}
+
+export type ModulesProps = {
+  title: string
+  modules: [
+    {
+      title: string
+      subtitle: string
+      description: string
+    }
+  ]
+}
+
+export type AgendaProps = {
+  title: string
+  description: string
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: AboutProps
+  sectionTech: TechsProps
+  sectionConcepts: ConceptsProps
+  sectionModules: ModulesProps
+  sectionAgenda: AgendaProps
 }
