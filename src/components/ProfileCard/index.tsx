@@ -12,10 +12,10 @@ const icons = {
   Dribbble: <FaDribbble />
 }
 
-type SocialLink = [{
+type SocialLink = {
   title: string
   url: string
-}]
+}
 
 type Photo = {
   alternativeText: string
@@ -26,7 +26,7 @@ type Props = {
   name: string
   role: string
   image: Photo
-  socialLinks: SocialLink
+  socialLinks: SocialLink[]
   description: string
 }
 
@@ -38,18 +38,7 @@ const ProfileCard: React.FC<Props> = ({
   description
 }) => (
   <S.Card key={name}>
-    <S.Image>
-      <source
-        srcSet={`${getImageUrl(image.url)}?webp`}
-        type="image/webp"
-      />
-      <source srcSet={getImageUrl(image.url)} type="image/png" />
-      <img
-        src={getImageUrl(image.url)}
-        loading="lazy"
-        alt={image.alternativeText}
-      />
-    </S.Image>
+    <S.Image src={getImageUrl(image.url)} alt={image.alternativeText} />
     <S.Name>{name}</S.Name>
     <S.Role>{role}</S.Role>
     <S.SocialLinks>
