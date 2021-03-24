@@ -46,3 +46,8 @@ Para pegar um código HTML do backend e apresentar corretamente no front, utiliz
 
 Essa abordagem é válida quando temos confiança no dado passado pelo backend.
 Em caso onde não há certeza, é necessário fazer a sanitização do dado antes de apresentá-lo.
+
+### Netlify (HTML, CSS e JS)
+
+1. Definir as envs de produção e subir para o repositório
+2. Escolher o projeto no Netlify e setar o comando de build/public directory
